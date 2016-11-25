@@ -32,6 +32,11 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+
+    //navigate to the hero details screen
+    let link = ['/detail', hero.id];
+    this.router.navigate(link);
+
   }
 
   gotoDetail(): void {

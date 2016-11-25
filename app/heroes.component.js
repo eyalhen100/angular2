@@ -25,6 +25,9 @@ var HeroesComponent = (function () {
     };
     HeroesComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
+        //navigate to the hero details screen
+        var link = ['/detail', hero.id];
+        this.router.navigate(link);
     };
     HeroesComponent.prototype.gotoDetail = function () {
         this.router.navigate(['/detail', this.selectedHero.id]);
